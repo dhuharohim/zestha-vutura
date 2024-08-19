@@ -7,14 +7,14 @@ import RightSection from "@components/ui/blocks/RightSection.astro";
 import FeaturesStats from "@components/sections/features/FeaturesStats.astro";
 
 // Import necessary images
-import blueprints from "@images/blueprints-image.avif";
-import personWorking from "@images/person-working.avif";
-import beforeAfter from "@images/before-after.avif";
-import constructionWorkers from "@images/construction-workers.avif";
-import aerialView from "@images/aerial-view.avif";
-import usingTools from "@images/using-tools.avif";
-import progressBuilding from "@images/progress-building.avif";
-import underConstruction from "@images/under-construction.avif";
+import cms from "@images/cms.jpg";
+import cms1 from "@images/cms-1.jpg";
+import saas from "@images/saas.jpg";
+import ecommerce from "@images/e-commerce.jpg";
+import ecommerce1 from "@images/e-commerce-1.jpg";
+import erp from "@images/erp.jpg";
+import eJournal from "@images/e-journal.jpg";
+import crm from "@images/crm.jpg";
 import { SITE } from "@data/constants";
 
 interface Article {
@@ -36,59 +36,55 @@ interface Article {
 const articles: Article[] = [
   {
     isRightSection: true,
-    title: "Delivering Expert Guidance",
+    title: "Content Management System (CMS)",
     subTitle:
-      "Embarking on a construction project can be overwhelming. With our professional consultation services, we guide you through every stage, ensuring you make informed decisions. Whether you are a DIY enthusiast or a skilled contractor, our experts are on hand to offer tailored advice on product selection, project scope, and compliance with local regulations.",
+      "We specialize in developing custom Content Management Systems (CMS) designed to meet the unique needs of your business. From building bespoke CMS solutions that are tailored to your requirements to integrating these systems seamlessly with your existing platforms, we ensure a smooth and efficient content management experience. Our services also include ongoing maintenance and support to keep your CMS up-to-date and functioning flawlessly.",
     single: false,
-    imgOne: blueprints,
+    imgOne: cms,
     imgOneAlt: "Blueprints and digital tablet with construction plans.",
-    imgTwo: personWorking,
+    imgTwo: cms1,
     imgTwoAlt: "Person working in the office",
   },
   {
     isRightSection: false,
-    title: "Transforming Designs into Reality",
+    title: "Software as a Service (SaaS) Platforms",
     subTitle:
-      "Our skilled craftsmen bring precision and excellence to every construction project. From minor installations to substantial structural work, ScrewFast offers reliable construction services to turn your plans into tangible outcomes. We ensure the highest standards of safety and workmanship, utilizing top-quality tools and materials from our extensive inventory.",
-    img: beforeAfter,
+      "Our expertise in Software as a Service (SaaS) platform development enables us to create scalable, cloud-based applications that grow with your business. We offer comprehensive services, including the design and development of SaaS applications, customization to align with your specific business needs, and integration with third-party services to enhance functionality and streamline operations.",
+    img: saas,
     imgAlt: "Construction site before and after",
-    btnExists: true,
-    btnTitle: "Learn More",
-    btnURL: "#",
   },
   {
     isRightSection: true,
-    title: "Navigating Projects with Professional Oversight",
+    title: "E-Commerce Solutions",
     subTitle:
-      "Effective project management is at the heart of any successful build. ScrewFast provides thorough planning and robust management services that keep your project on time and within budget. Let us handle the complexities of workflow coordination, resource allocation, and stakeholder communication while you focus on your vision.",
+      "We provide end-to-end e-commerce solutions to help you establish and grow your online store. Our services include developing robust, secure e-commerce websites with intuitive user interfaces, integrating various payment gateways for seamless transactions, and customizing e-commerce platforms to suit your specific business model. We ensure that your online store is equipped to handle everything from product listings to customer transactions with ease.",
     single: false,
-    imgOne: constructionWorkers,
+    imgOne: ecommerce,
     imgOneAlt: "Construction workers orchestrating a project",
-    imgTwo: aerialView,
+    imgTwo: ecommerce1,
     imgTwoAlt: "Aerial view of managed construction",
   },
   {
     isRightSection: false,
-    title: "Ensuring Long-lasting Performance",
+    title: "E-Journal and Publishing",
     subTitle:
-      "Our commitment to your project doesn't end at completion. ScrewFast offers ongoing maintenance and support services to ensure your construction's longevity and performance. From regular check-ups to emergency assistance, our responsive team is there to provide seamless support.",
-    img: usingTools,
+      "We offer specialized services for developing and managing e-journals and publishing platforms. Whether you need a solution for an online journal, magazine, or newsletter, our team provides tools for content creation, subscription management, and distribution. Our platforms are designed to facilitate seamless publishing processes and manage subscriber access effectively.",
+    img: eJournal,
     imgAlt:
       "Man in orange and black vest wearing white helmet holding yellow and black power tool",
   },
   {
     isRightSection: true,
-    title: "Crafting Bespoke Strategies for Unique Challenges",
+    title:
+      "Enterprise Resource Planning (ERP) and Customer Relationship Management (CRM)",
     subTitle:
-      "For our larger enterprise clients, ScrewFast offers custom solutions designed to meet specific industry challenges. By understanding your unique needs, we engineer tailored strategies aimed at optimizing your operations, enhancing efficiency, and driving your business forward.",
+      "We offer robust ERP and CRM solutions designed to transform and streamline your business operations. Our ERP systems integrate all key functions—such as finance, human resources, supply chain management, and production—into a cohesive platform, enhancing operational efficiency and providing valuable insights for data-driven decision-making. Complementing our ERP solutions, our CRM systems are designed to manage and analyze customer interactions and data throughout the customer lifecycle. Our CRM solutions help you improve customer relationships, optimize sales and marketing strategies, and enhance customer service. Both ERP and CRM systems are customized to fit your industry-specific needs, ensuring seamless integration with your existing infrastructure and providing ongoing support to maximize performance and growth.",
     single: false,
-    imgOne: progressBuilding,
+    imgOne: erp,
     imgOneAlt: "In progress building structure",
-    imgTwo: underConstruction,
+    imgTwo: crm,
     imgTwoAlt: "Brown and gray building under construction",
-    btnExists: true,
-    btnTitle: "Read more",
-    btnURL: "#",
+    btnExists: false,
   },
 ];
 
@@ -100,27 +96,27 @@ const pageTitle: string = `Services | ${SITE.title}`;
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/services",
-    "url": "https://screwfast.uk/services",
-    "name": "Expert Consultation Services | ScrewFast",
-    "description": "Uniting expertise with your vision, ScrewFast provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
-    "isPartOf": {
-        "@type": "WebSite",
-        "url": "https://screwfast.uk",
-        "name": "ScrewFast",
-        "description": "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs."
+    "@id": "https://zestha-vutura.tech/services",
+    url: "https://zestha-vutura.tech/services",
+    name: "Expert Consultation Services | Zestha Vutura",
+    description:
+      "Uniting expertise with your vision, Zestha Vutura provides exceptional service and comprehensive solutions in the hardware and construction industry, from consultation to project completion.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://zestha-vutura.tech",
+      name: "Zestha Vutura",
+      description:
+        "Zestha Vutura offers top-tier hardware tools and expert construction services to meet all your project needs.",
     },
-    "inLanguage": "en-US"
+    inLanguage: "en-US",
   }}
 >
   <!--MainSection is the introductory section of the page, it also contains a CTA button-->
-  <MainSection
+  <!-- <MainSection
     title="Uniting Expertise with Your Vision"
-    subTitle="At ScrewFast, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
-    btnExists={true}
-    btnTitle="Schedule a Consultation"
-    btnURL="#"
-  />
+    subTitle="At Zestha Vutura, we take pride in providing comprehensive solutions and exceptional service in the hardware and construction industry. Our experienced team is dedicated to supporting your project from inception to completion with a range of specialized services."
+    btnExists={false}
+  /> -->
   <!-- RightSection and LeftSection contain details about various services along with pertinent imagery.
   They alternate for variety in design.
   The 'btnExists' property is used to toggle the display of a button in these sections.
@@ -130,7 +126,7 @@ const pageTitle: string = `Services | ${SITE.title}`;
   If 'single' is true, it displays one image, otherwise it displays two.
   -->
   {
-    articles.map(article => {
+    articles.map((article) => {
       return article.isRightSection ? (
         <RightSection
           title={article.title}
@@ -160,9 +156,9 @@ const pageTitle: string = `Services | ${SITE.title}`;
   <!--FeaturesStats section showcases essential stats valuable to users-->
   <FeaturesStats
     title="By the Numbers"
-    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At ScrewFast, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
+    subTitle="Our commitment to quality and reliability is evident in every project we undertake. At Zestha Vutura, we are dedicated to delivering industry-leading services that ensure your construction projects are built to last."
     mainStatTitle="96%"
-    mainStatSubTitle="of our clients rate their experience with ScrewFast as exceptional"
+    mainStatSubTitle="of our clients rate their experience with Zestha Vutura as exceptional"
     stats={[
       {
         stat: "99.8%",
