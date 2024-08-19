@@ -15,6 +15,8 @@ import OurTeamSection from "@/components/sections/OurTeamSection.astro";
 import photoGuntur from "@images/guntur.jpeg";
 import photoRoji from "@images/roji.jpeg";
 import photoDhuha from "@images/dhuha.jpeg";
+import photoVirgi from "@images/virgi.jpeg";
+import photoZiyad from "@images/ziyad.jpeg";
 
 const englishPortfolioEntries = await getCollection("portfolio", ({ id }) => {
   return id.startsWith("en/");
@@ -67,12 +69,28 @@ const testimonials = [
 
 const teams: any[] = [
   {
+    name: "Virgi Ghali Putra",
+    position: "IT Manager",
+    photoUrl: photoVirgi.src,
+    instagramUrl: "https://instagram.com/virgighal",
+    whatsAppUrl: "https://wa.me/6285156866591",
+    linkedInUrl: "https://www.linkedin.com/in/virgi-ghali-putra-99a289186/",
+  },
+  {
+    name: "Ziyadatul Khair",
+    position: "Software Engineer",
+    photoUrl: photoZiyad.src,
+    instagramUrl: "https://instagram.com/ziddkh",
+    whatsAppUrl: "https://wa.me/6285186808018",
+    linkedInUrl: "https://www.linkedin.com/in/ziyadatul-khair/",
+  },
+  {
     name: "M Dhuha Rohim",
     position: "Software Engineer",
     photoUrl: photoDhuha.src,
     instagramUrl: "https://instagram.com/cmd.exee",
     whatsAppUrl: "https://wa.me/6282229011758",
-    linkedInUrl: "https://linkedin.com/",
+    linkedInUrl: "https://www.linkedin.com/in/dhuha-cmd-7500922a9/",
   },
   {
     name: "Muhammad Fahrurrozi",
