@@ -20,7 +20,7 @@ const favicons: Favicon[] = [
     purpose: 'maskable',
     src: maskableIcon,
     sizes,
-   },
+  },
 ];
 
 export const GET: APIRoute = async () => {
@@ -44,8 +44,8 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "ScrewFast",
-    name: "ScrewFast",
+    short_name: "Zestha Vutura",
+    name: "Zestha Vutura",
     icons,
     display: "minimal-ui",
     id: "/",
