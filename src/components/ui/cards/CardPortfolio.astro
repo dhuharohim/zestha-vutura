@@ -1,0 +1,69 @@
+---
+// Import necessary components and utilities
+import { Image } from "astro:assets";
+import { formatDate } from "@utils/utils";
+import type { CollectionEntry } from "astro:content";
+
+const { portfolioEntry, portfolioLocale = "" } = Astro.props;
+
+interface Props {
+  portfolioEntry: CollectionEntry<"portfolio">;
+  portfolioLocale?: string;
+}
+---
+
+<!-- The following anchor tag is the main container for the card.
+     It's a link to the portfolio post detailed page.
+     The data-astro-prefetch is an Astro specific Dynamic HTML feature,
+     which automatically prefetches the linked page to speed up navigation. -->
+<a
+  class="group relative block rounded-xl outline-none ring-zinc-500 transition duration-500 focus-visible:ring dark:ring-zinc-200 dark:focus:outline-none"
+  href={portfolioLocale !== ""
+    ? `/${portfolioLocale}/portfolio/${portfolioEntry.slug}/`
+    : `/portfolio/${portfolioEntry.slug}/`}
+  data-astro-prefetch
+>
+  <!-- The container for the portfolio post's cover image. Uses astro:assets' Image for image source -->
+  <div
+    class="relative h-[350px] w-full flex-shrink-0 overflow-hidden rounded-xl before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-neutral-900/[.7]"
+  >
+    <Image
+      class="absolute start-0 top-0 size-full object-cover transition duration-500 group-hover:scale-110"
+      src={portfolioEntry.data.cardImage}
+      alt={portfolioEntry.data.cardImageAlt}
+      draggable={"false"}
+      loading={"eager"}
+      format={"avif"}
+    />
+  </div>
+  <!-- The container for the portfolio author's avatar and associated metadata (author name and publication date) -->
+  <div class="absolute inset-x-0 top-0 z-10">
+    <div class="flex h-full flex-col p-4 sm:p-6">
+      <!-- <div class="flex items-center">
+        <Avatarportfolio portfolioEntry={portfolioEntry} />
+
+        <div class="ms-2.5 sm:ms-4">
+          <h4 class="font-bold text-neutral-50">
+            {portfolioEntry.data.author}
+          </h4>
+          <p class="text-xs text-neutral-50/[.8]">
+            {formatDate(portfolioEntry.data.pubDate)}
+          </p>
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- The container for the portfolio post's title and description -->
+  <div class="absolute inset-x-0 bottom-0 z-10">
+    <div class="flex h-full flex-col p-4 sm:p-6">
+      <h3
+        class="text-balance text-lg font-bold text-neutral-50 group-hover:text-neutral-50/[.8] sm:text-3xl"
+      >
+        {portfolioEntry.data.title}
+      </h3>
+      <p class="mt-2 text-pretty text-neutral-50/[.8]">
+        {portfolioEntry.data.description}
+      </p>
+    </div>
+  </div>
+</a>

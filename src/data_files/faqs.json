@@ -1,0 +1,29 @@
+{
+  "subTitle": "Ask us anything about our brand and products, and get factual responses.",
+  "faqs": [
+    {
+      "question": "What types of software solutions does Zestha Vutura offer?",
+      "answer": "Zestha Vutura offers a wide range of software solutions, including project management tools, automated workflows, user-friendly dashboards, and comprehensive documentation support to streamline your software development process."
+    },
+    {
+      "question": "How can Zestha Vutura's solutions help my team increase productivity?",
+      "answer": "Our solutions are designed to minimize complexity and enhance efficiency. With intuitive interfaces and robust features, Zestha Vutura enables your team to manage projects more effectively, automate repetitive tasks, and focus on delivering high-quality results."
+    },
+    {
+      "question": "Are Zestha Vutura’s solutions customizable to fit specific business needs?",
+      "answer": "Yes, our solutions are highly customizable. We work closely with our clients to tailor our offerings to meet the unique requirements of your software and technology projects, ensuring that our tools align perfectly with your business goals."
+    },
+    {
+      "question": "What industries can benefit from Zestha Vutura’s solutions?",
+      "answer": "While our solutions are versatile and can be adapted to various industries, they are particularly well-suited for companies in the software, technology, and digital transformation sectors that require efficient project management and automation tools."
+    },
+    {
+      "question": "How do I request a demo or consultation with Zestha Vutura?",
+      "answer": "You can request a demo or consultation by contacting us directly through our website or by reaching out to our sales team. We’ll be happy to walk you through our offerings and discuss how we can best meet your needs."
+    },
+    {
+      "question": "What makes Zestha Vutura different from other software solution providers?",
+      "answer": "Zestha Vutura stands out for its commitment to customization, user-centric design, and comprehensive support. Our solutions are not only powerful but also tailored to ensure your business achieves its goals with maximum efficiency and minimal complexity."
+    }
+  ]
+}

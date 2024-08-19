@@ -1,0 +1,62 @@
+---
+import CardOurTeam from "../ui/cards/CardOurTeam.astro";
+
+const { title, subTitle, teams } = Astro.props;
+
+interface Props {
+  title: string;
+  subTitle?: string;
+  teams: Teams[];
+}
+
+// TypeScript type for team
+type Teams = {
+  name: string;
+  position: string;
+  photoUrl: string;
+  instagramUrl: string;
+  linkedInUrl: string;
+  whatsAppUrl: string;
+};
+---
+
+<section
+  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+>
+  <!-- Container for the team -->
+  <div
+    class="lg:grid lg:grid-cols-12 lg:items-center lg:justify-between lg:gap-16"
+  >
+    <div class="lg:col-span-5 lg:col-start-1">
+      <!-- Title and Subtitle -->
+      <div class="mb-8">
+        <h2
+          class="mb-2 text-3xl font-bold text-neutral-800 dark:text-neutral-200 lg:text-4xl"
+        >
+          {title}
+        </h2>
+        {
+          subTitle && (
+            <p class="text-neutral-600 dark:text-neutral-400">{subTitle}</p>
+          )
+        }
+      </div>
+    </div>
+  </div>
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <!-- Generate a blockquote for each team in the team array by mapping over the array. -->
+    {
+      teams &&
+        teams.map((team) => (
+          <CardOurTeam
+            name={team.name}
+            position={team.position}
+            photoUrl={team.photoUrl}
+            instagramUrl={team.instagramUrl}
+            linkedinUrl={team.linkedInUrl}
+            whatsappUrl={team.whatsAppUrl}
+          />
+        ))
+    }
+  </div>
+</section>

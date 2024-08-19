@@ -1,0 +1,166 @@
+---
+// Importing necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
+import CardSmall from "@components/ui/cards/CardSmall.astro";
+import CardWide from "@components/ui/cards/CardWide.astro";
+import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
+import TestimonialsSectionAlt from "@components/sections/testimonials/TestimonialsSectionAlt.astro";
+import CardPortfolio from "@/components/ui/cards/CardPortfolio.astro";
+// Importing necessary functions from Astro
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { SITE } from "@data/constants";
+import OurTeamSection from "@/components/sections/OurTeamSection.astro";
+import photoGuntur from "@images/guntur.jpeg";
+import photoRoji from "@images/roji.jpeg";
+import photoDhuha from "@images/dhuha.jpeg";
+
+const englishPortfolioEntries = await getCollection("portfolio", ({ id }) => {
+  return id.startsWith("en/");
+});
+
+const portfolioPosts: CollectionEntry<"portfolio">[] =
+  englishPortfolioEntries.sort(
+    (a: CollectionEntry<"portfolio">, b: CollectionEntry<"portfolio">) =>
+      b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+  );
+
+// Define variables for page content
+const title: string = "Portfolio";
+const subTitle: string =
+  "Discover the reliability and efficiency of Zestha Vutura’s software solutions, crafted for both professionals and tech enthusiasts. Each of our products is meticulously developed with precision and built for longevity, ensuring you have the right tools to tackle every digital challenge.";
+
+// Testimonial data that will be rendered in the component
+const testimonials = [
+  // First testimonial data
+  {
+    content:
+      " \"Since switching to Zestha Vutura's software solutions, our project management efficiency has soared. The reliability of their tools and the precision of their automated processes are simply unmatched. It's refreshing to work with a company that truly understands the daily demands of the tech industry.\" ",
+    author: "Halil M Wibowo",
+    role: "Owner @akartcreative | Creative Industry",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1374&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Image Description",
+  },
+  // Second testimonial data
+  {
+    content:
+      " \"As a UI/UX designer, I'm always seeking high-quality tools and resources that help bring my ideas to life. Zestha Vutura's software solutions have been a game-changer for my projects, offering the perfect blend of quality and versatility. The outstanding customer support was just the cherry on top!\" ",
+    author: "Deo Andra Gunawan",
+    role: "UI/UX Designer | Creative Spaces",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1376&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Image Description",
+  },
+  // Third testimonial data
+  {
+    content:
+      ' "I’ve been a professional software developer for over 15 years, and I can sincerely say that Zestha Vutura’s tools and platforms are some of the best I\'ve used. They perform flawlessly, and I have full confidence in every project and deployment. Plus, the service is impeccable – they truly care about the success of my work." ',
+    author: "Guntur Masputra Jr.",
+    role: "Software Developer | Internet Service Provider",
+    avatarSrc:
+      "https://images.unsplash.com/photo-1474176857210-7287d38d27c6?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+    avatarAlt: "Image Description",
+  },
+];
+
+const teams: any[] = [
+  {
+    name: "M Dhuha Rohim",
+    position: "Software Engineer",
+    photoUrl: photoDhuha.src,
+    instagramUrl: "https://instagram.com/cmd.exee",
+    whatsAppUrl: "https://wa.me/6282229011758",
+    linkedInUrl: "https://linkedin.com/",
+  },
+  {
+    name: "Muhammad Fahrurrozi",
+    position: "Data Science & Analyst",
+    photoUrl: photoRoji.src,
+    instagramUrl: "https://instagram.com/mfrozii__",
+    whatsAppUrl: "https://wa.me/6287761736314",
+    linkedInUrl: "https://www.linkedin.com/in/muhamad-fahrurrozi/",
+  },
+  {
+    name: "Guntur Masputra Jr",
+    position: "Software Engineer",
+    photoUrl: photoGuntur.src,
+    instagramUrl: "https://instagram.com/gunturmjr",
+    linkedInUrl: "http://linkedin.com/in/gunturmjr",
+    whatsAppUrl: "https://wa.me/6289634701845",
+  },
+];
+
+const pageTitle: string = `Portfolio | ${SITE.title}`;
+---
+
+<MainLayout
+  title={pageTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://zestha-vutura.tech/portfolio",
+    url: "https://zestha-vutura.tech/portfolio",
+    name: "Hardware Tools | Zestha Vutura",
+    description:
+      "Explore the durability and precision of Zestha Vutura tools, designed for both professionals and enthusiasts.",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://zestha-vutura.tech",
+      name: "Zestha Vutura",
+      description:
+        "Zestha Vutura offers top-tier hardware tools and expert construction services to meet all your project needs.",
+    },
+    inLanguage: "en-US",
+  }}
+>
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-balance text-2xl font-bold tracking-tight text-neutral-800 dark:text-neutral-200 md:text-4xl md:leading-tight"
+        >
+          {title}
+        </h1>
+        {
+          subTitle && (
+            <p class="hidden max-w-screen-sm text-pretty text-neutral-600 dark:text-neutral-400 md:block">
+              {subTitle}
+            </p>
+          )
+        }
+      </div>
+      <PrimaryCTA title="Customer Stories" url="#testimonials" noArrow={true} />
+    </div>
+
+    <!--Displaying products in alternating styles. Alternative product gets different card styling.-->
+    <div class="grid gap-6 lg:grid-cols-2">
+      {
+        portfolioPosts.map((portfolioEntry) => (
+          <CardPortfolio portfolioEntry={portfolioEntry} />
+        ))
+      }
+    </div>
+  </div>
+  <!--Features statistics section-->
+  <!-- <FeaturesStatsAlt
+    title="Why Choose ScrewFast?"
+    subTitle="Transform your ideas into tangible results with ScrewFast tools. Whether you're starting with a sketch on a napkin or diving into a comprehensive construction project, our tools are engineered to help you build with confidence."
+    benefits={[
+      "Robust and reliable tools for long-lasting performance.",
+      "Innovative solutions tailored to modern construction needs.",
+      "Customer support dedicated to your project's success.",
+    ]}
+  /> -->
+  <!--Testimonials section-->
+  <TestimonialsSectionAlt
+    title="What Our Customers Say"
+    testimonials={testimonials}
+  />
+
+  <!-- Our Team section -->
+  <OurTeamSection title="Meet Our Team" teams={teams} />
+</MainLayout>
