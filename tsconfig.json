@@ -12,5 +12,7 @@
       "@styles/*": ["src/assets/styles/*"],
       "@utils/*": ["src/utils/*"]
     },
+    "noUnusedLocals": false, // Disable errors for unused local variables
+    "noUnusedParameters": false // Disable errors for unused parameters
   }
 }

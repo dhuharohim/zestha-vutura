@@ -1,0 +1,10 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "no-unused-vars": "off", // Disable the rule for JavaScript
+    "@typescript-eslint/no-unused-vars": "off" // Disable the rule for TypeScript
+  }
+}

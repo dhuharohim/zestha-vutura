@@ -38,7 +38,12 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "astro-eslint-parser": "^1.0.2",
     "astro-vtbot": "^1.8.4",
+    "eslint": "^9.9.0",
+    "eslint-define-config": "^2.1.0",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-tailwindcss": "^0.6.6",
