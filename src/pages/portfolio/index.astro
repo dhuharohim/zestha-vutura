@@ -17,6 +17,9 @@ import photoRoji from "@images/roji.jpeg";
 import photoDhuha from "@images/dhuha.jpeg";
 import photoVirgi from "@images/virgi.jpeg";
 import photoZiyad from "@images/ziyad.jpeg";
+import photoDeo from "@images/deo.jpeg";
+import photoTelaga from "@images/telaga.jpeg";
+import photoTirta from "@images/tirta.jpeg";
 
 const englishPortfolioEntries = await getCollection("portfolio", ({ id }) => {
   return id.startsWith("en/");
@@ -107,6 +110,30 @@ const teams: any[] = [
     instagramUrl: "https://instagram.com/gunturmjr",
     linkedInUrl: "http://linkedin.com/in/gunturmjr",
     whatsAppUrl: "https://wa.me/6289634701845",
+  },
+  {
+    name: "Deo Andra Gunawan",
+    position: "UI/UX Designer",
+    photoUrl: photoDeo.src,
+    instagramUrl: "https://instagram.com/deoandra",
+    linkedInUrl: "http://linkedin.com/in/deoandra",
+    whatsAppUrl: "https://wa.me/6285278048982",
+  },
+  {
+    name: "Muhammad Telaga Nur H.N",
+    position: "Software Engineer",
+    photoUrl: photoTelaga.src,
+    instagramUrl: "https://instagram.com/telagamuhammad",
+    linkedInUrl: "https://www.linkedin.com/in/muhammad-telaga-110a73111/",
+    whatsAppUrl: "https://wa.me/6282213589750",
+  },
+  {
+    name: "Tirta G.",
+    position: "Software Quality Assurance",
+    photoUrl: photoTirta.src,
+    instagramUrl: "https://instagram.com/partnerspock",
+    linkedInUrl: "https://www.linkedin.com/in/abrahamtirta/",
+    whatsAppUrl: "https://wa.me/6281383038443",
   },
 ];
 
