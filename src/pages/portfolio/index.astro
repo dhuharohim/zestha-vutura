@@ -20,6 +20,7 @@ import photoZiyad from "@images/ziyad.jpeg";
 import photoDeo from "@images/deo.jpeg";
 import photoTelaga from "@images/telaga.jpeg";
 import photoTirta from "@images/tirta.jpeg";
+import photoRayhan from "@images/rayhan.jpeg";
 
 const englishPortfolioEntries = await getCollection("portfolio", ({ id }) => {
   return id.startsWith("en/");
@@ -134,6 +135,14 @@ const teams: any[] = [
     instagramUrl: "https://instagram.com/partnerspock",
     linkedInUrl: "https://www.linkedin.com/in/abrahamtirta/",
     whatsAppUrl: "https://wa.me/6281383038443",
+  },
+  {
+    name: "Rayhan Ibrahim Manitri",
+    position: "Software Quality Assurance",
+    photoUrl: photoRayhan.src,
+    instagramUrl: "https://instagram.com/rayhanmantiri",
+    // linkedInUrl: "https://www.linkedin.com/in/abrahamtirta/",
+    whatsAppUrl: "https://wa.me/6282114646819",
   },
 ];
 
