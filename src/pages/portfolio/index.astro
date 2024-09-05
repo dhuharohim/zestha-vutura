@@ -21,6 +21,7 @@ import photoDeo from "@images/deo.jpeg";
 import photoTelaga from "@images/telaga.jpeg";
 import photoTirta from "@images/tirta.jpeg";
 import photoRayhan from "@images/rayhan.jpeg";
+import photoFio from "@images/fio.jpeg";
 
 const englishPortfolioEntries = await getCollection("portfolio", ({ id }) => {
   return id.startsWith("en/");
@@ -143,6 +144,14 @@ const teams: any[] = [
     instagramUrl: "https://instagram.com/rayhanmantiri",
     // linkedInUrl: "https://www.linkedin.com/in/abrahamtirta/",
     whatsAppUrl: "https://wa.me/6282114646819",
+  },
+  {
+    name: "Fio Prasetyo",
+    position: "DevOps Government",
+    photoUrl: photoFio.src,
+    linkedInUrl: "https://www.linkedin.com/in/fio-prasetyo-048570162/",
+    instagramUrl: "https://www.instagram.com/prasfiooo",
+    whatsAppUrl: "https://wa.me/6281389564493",
   },
 ];
 
