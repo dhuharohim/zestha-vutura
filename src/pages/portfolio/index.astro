@@ -22,6 +22,7 @@ import photoTelaga from "@images/telaga.jpeg";
 import photoTirta from "@images/tirta.jpeg";
 import photoRayhan from "@images/rayhan.jpeg";
 import photoFio from "@images/fio.jpeg";
+import photoHakam from "@images/hakam.jpg";
 
 const englishPortfolioEntries = await getCollection("portfolio", ({ id }) => {
   return id.startsWith("en/");
@@ -152,6 +153,14 @@ const teams: any[] = [
     linkedInUrl: "https://www.linkedin.com/in/fio-prasetyo-048570162/",
     instagramUrl: "https://www.instagram.com/prasfiooo",
     whatsAppUrl: "https://wa.me/6281389564493",
+  },
+  {
+    name: "Hakam Raves",
+    position: "Data Science & Analyst",
+    photoUrl: photoHakam.src,
+    linkedInUrl: "https://www.linkedin.com/in/hakamraves/",
+    instagramUrl: "https://www.instagram.com/hakamraves",
+    whatsAppUrl: "https://wa.me/628311117335",
   },
 ];
 
